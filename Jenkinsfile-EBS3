@@ -44,10 +44,10 @@ pipeline {
             }
     }
     }
-    post {
-        always {
+    stage ("Logout") {
+        steps {
             sh 'docker logout'
+            }
         }
-    }
 
 }
